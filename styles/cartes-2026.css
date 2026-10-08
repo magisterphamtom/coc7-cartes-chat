@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Thèmes modernes 2026 — cartes de chat (prototype)
+   ========================================================================== */
+
+/* ---------- New York 2026 : verre fumé, LED, signalétique du métro ---------- */
+body.c7cc-ny2026 {
+  --c7cc-bg: linear-gradient(160deg, rgba(34, 38, 46, 0.96) 0%, rgba(14, 16, 20, 0.98) 100%);
+  --c7cc-border: #3a3f48;
+  --c7cc-border-outer: transparent;
+  --c7cc-ink: #f2f3f5;
+  --c7cc-ink-dim: #9aa0aa;
+  --c7cc-accent: #ffffff;
+  --c7cc-rule: linear-gradient(90deg, #fccc0a 0 24px, #3a3f48 24px);
+  --c7cc-shadow: 0 6px 18px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --c7cc-corner: transparent;
+
+  --c7cc-font-title: "M26 Inter", "Helvetica Neue", Arial, sans-serif;
+  --c7cc-font-label: "M26 Inter", "Helvetica Neue", Arial, sans-serif;
+  --c7cc-font-body: "M26 Inter", "Helvetica Neue", Arial, sans-serif;
+  --c7cc-label-weight: 400;
+  --c7cc-title-size: 14px;
+  --c7cc-font-total: "M26 Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --c7cc-total-size: 26px;
+
+  --c7cc-button-bg: #1b1e24;
+  --c7cc-button-ink: #f2f3f5;
+  --c7cc-button-border: #3a3f48;
+  --c7cc-button-hover: #262a32;
+
+  --c7cc-level-bg: rgba(255, 255, 255, 0.04);
+  --c7cc-level-border: #2c3038;
+
+  --c7cc-total-bg: #111317;
+  --c7cc-total-ink: #f2f3f5;
+  --c7cc-total-border: #2c3038;
+  --c7cc-fail-bg: #2a1214;            --c7cc-fail-ink: #ff5a52;
+  --c7cc-regular-bg: #0a2d6e;         --c7cc-regular-ink: #ffffff;   /* ligne bleue (A C E) */
+  --c7cc-hard-bg: #00933c;            --c7cc-hard-ink: #ffffff;      /* ligne verte (4 5 6) */
+  --c7cc-extreme-bg: #fccc0a;         --c7cc-extreme-ink: #111317;   /* ligne jaune (N Q R W) */
+  --c7cc-critical-bg: #000000;
+  --c7cc-critical-ink: #fccc0a;
+  --c7cc-fumble-bg: #000000;          --c7cc-fumble-ink: #ee352e;
+
+  --c7cc-success-ink: #ffffff;
+  --c7cc-failure-ink: #ff5a52;
+  --c7cc-icon-success: #fccc0a;
+  --c7cc-icon-failure: #ee352e;
+  --c7cc-whisper-ink: #6cbe45;
+}
+
+body.c7cc-ny2026 .chat-message:not(.cthud-card) {
+  border-radius: 10px !important;
+  outline: none;
+  backdrop-filter: blur(6px);
+}
+/* Nom : panneau de quai noir, pastille de ligne avec l'initiale */
+body.c7cc-ny2026 .chat-message:not(.cthud-card) .message-sender {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+body.c7cc-ny2026 .chat-message:not(.cthud-card) .message-sender::before {
+  content: attr(data-initial);
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fccc0a;
+  color: #111317;
+  font-size: 11px;
+  font-weight: 600;
+  flex: none;
+}
+body.c7cc-ny2026 .chat-message:not(.cthud-card) .flavor-text {
+  font-style: normal;
+  color: #c7ccd4 !important;
+}
+body.c7cc-ny2026 .chat-message .dice-roll .dice-formula {
+  border-radius: 6px !important;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+body.c7cc-ny2026 .chat-message .dice-roll .dice-total {
+  border-radius: 6px !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+/* Critique : afficheur LED jaune du métro */
+body.c7cc-ny2026 .chat-message .dice-roll .dice-total.critical,
+body.c7cc-ny2026 .chat-message .dice-roll .dice-formula.critical {
+  border: 1px solid #fccc0a !important;
+  text-shadow: 0 0 6px rgba(252, 204, 10, 0.9);
+  box-shadow: 0 0 12px rgba(252, 204, 10, 0.35), inset 0 0 0 1px rgba(252, 204, 10, 0.25) !important;
+  background-image: radial-gradient(circle, rgba(252, 204, 10, 0.10) 0 1px, transparent 1.5px) !important;
+  background-size: 4px 4px !important;
+}
+body.c7cc-ny2026 .chat-message .dice-roll .dice-total.failure,
+body.c7cc-ny2026 .chat-message .dice-roll .dice-total.fumble {
+  text-shadow: 0 0 8px rgba(238, 53, 46, 0.7);
+}
+body.c7cc-ny2026 .chat-message .coc7-card-buttons button {
+  border-radius: 6px !important;
+}
+
+/* ---------- Antarctique 2026 : tablette de station polaire ---------- */
+body.c7cc-antarctique2026 {
+  --c7cc-bg:
+    linear-gradient(rgba(120, 160, 190, 0.07) 1px, transparent 1px) 0 0 / 14px 14px,
+    linear-gradient(90deg, rgba(120, 160, 190, 0.07) 1px, transparent 1px) 0 0 / 14px 14px,
+    linear-gradient(180deg, #f7fafc 0%, #e9f0f5 100%);
+  --c7cc-border: #c9d7e2;
+  --c7cc-border-outer: transparent;
+  --c7cc-ink: #13202c;
+  --c7cc-ink-dim: #5b6f80;
+  --c7cc-accent: #13202c;
+  --c7cc-rule: linear-gradient(90deg, #ff6a13 0 18px, #c9d7e2 18px);
+  --c7cc-shadow: 0 4px 14px rgba(20, 50, 80, 0.25);
+  --c7cc-corner: transparent;
+
+  --c7cc-font-title: "M26 Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --c7cc-font-label: "M26 Inter", "Helvetica Neue", Arial, sans-serif;
+  --c7cc-font-body: "M26 Inter", "Helvetica Neue", Arial, sans-serif;
+  --c7cc-label-weight: 400;
+  --c7cc-title-size: 16px;
+  --c7cc-font-total: "M26 Rajdhani", "Rajdhani", "Arial Narrow", sans-serif;
+  --c7cc-total-size: 26px;
+
+  --c7cc-button-bg: #ffffff;
+  --c7cc-button-ink: #13202c;
+  --c7cc-button-border: #c9d7e2;
+  --c7cc-button-hover: #eef4f8;
+
+  --c7cc-level-bg: #ffffff;
+  --c7cc-level-border: #d6e1ea;
+
+  --c7cc-total-bg: #ffffff;
+  --c7cc-total-ink: #13202c;
+  --c7cc-total-border: #d6e1ea;
+  --c7cc-fail-bg: #fff1e8;            --c7cc-fail-ink: #e2540a;
+  --c7cc-regular-bg: #e3f1fb;         --c7cc-regular-ink: #0c4a72;
+  --c7cc-hard-bg: #9fd3f2;            --c7cc-hard-ink: #06324f;
+  --c7cc-extreme-bg: #1f7fbf;         --c7cc-extreme-ink: #ffffff;
+  --c7cc-critical-bg: linear-gradient(100deg, #0b1d33 0%, #0f5e5a 30%, #2bd49a 55%, #6a5acd 85%, #0b1d33 100%);
+  --c7cc-critical-ink: #ffffff;
+  --c7cc-fumble-bg: #1a0a05;          --c7cc-fumble-ink: #ff6a13;
+
+  --c7cc-success-ink: #0c4a72;
+  --c7cc-failure-ink: #e2540a;
+  --c7cc-icon-success: #1f7fbf;
+  --c7cc-icon-failure: #ff6a13;
+  --c7cc-whisper-ink: #6a5acd;
+}
+
+body.c7cc-antarctique2026 .chat-message:not(.cthud-card) {
+  border-radius: 8px !important;
+  outline: none;
+}
+/* Nom : en capitales « télémétrie », voyant d'état orange */
+body.c7cc-antarctique2026 .chat-message:not(.cthud-card) .message-sender {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+body.c7cc-antarctique2026 .chat-message:not(.cthud-card) .message-sender::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6a13;
+  box-shadow: 0 0 6px rgba(255, 106, 19, 0.8);
+  margin-right: 7px;
+  vertical-align: middle;
+}
+body.c7cc-antarctique2026 .chat-message:not(.cthud-card) .flavor-text {
+  font-style: normal;
+}
+body.c7cc-antarctique2026 .chat-message .dice-roll .dice-formula {
+  border-radius: 5px !important;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total {
+  border-radius: 5px !important;
+  font-weight: 700;
+}
+body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.critical {
+  background-size: 200% 100% !important;
+  animation: c7cc-aurora 6s ease-in-out infinite alternate;
+}
+body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.failure,
+body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.fumble {
+  background-image: repeating-linear-gradient(-45deg, transparent 0 8px, rgba(255, 106, 19, 0.12) 8px 16px) !important;
+}
+body.c7cc-antarctique2026 .chat-message .coc7-card-buttons button {
+  border-radius: 5px !important;
+}
+@keyframes c7cc-aurora {
+  to { background-position: 100% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.critical { animation: none; }
+}

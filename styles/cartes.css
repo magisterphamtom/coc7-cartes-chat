@@ -1,0 +1,486 @@
+/* ==========================================================================
+   CoC7 – Cartes de chat thématiques
+   Chaque thème ne définit que des variables (body.c7cc-<thème>) ;
+   la mise en forme commune est dans la partie « Structure ».
+   Dans Combat Cthulhu HUD (.cthud-card), seuls les résultats et les boutons des cartes suivent le thème : le cadre des cartes suit le thème du HUD.
+   ========================================================================== */
+
+/* ---------- Thème : Années 20 (Art Déco noir et or) ---------- */
+body.c7cc-annees20 {
+  --c7cc-bg: linear-gradient(180deg, #211a11 0%, #15110c 100%);
+  --c7cc-bg-plain: #18130d;
+  --c7cc-border: #c9a24a;
+  --c7cc-border-outer: #7d6128;
+  --c7cc-ink: #efe3c6;
+  --c7cc-ink-dim: #b9a984;
+  --c7cc-accent: #ecd08a;
+  --c7cc-rule: linear-gradient(90deg, transparent, #c9a24a, transparent);
+  --c7cc-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+  --c7cc-corner: #ecd08a;
+
+  --c7cc-font-title: "C7CC Limelight", "Limelight", Georgia, serif;
+  --c7cc-font-label: "C7CC Poiret One", "Poiret One", "Futura", sans-serif;
+  --c7cc-font-body: "C7CC Special Elite", "Special Elite", "Courier New", monospace;
+  --c7cc-label-weight: 600;
+  --c7cc-title-size: 15px;
+  --c7cc-font-total: var(--c7cc-font-title);
+  --c7cc-total-size: 22px;
+
+  --c7cc-button-bg: #0f0c08;
+  --c7cc-button-ink: #ecd08a;
+  --c7cc-button-border: #7d6128;
+  --c7cc-button-hover: #2a2114;
+
+  /* bandeau « niveau de réussite » */
+  --c7cc-level-bg: rgba(201, 162, 74, 0.08);
+  --c7cc-level-border: #7d6128;
+
+  /* chiffre du jet, selon le niveau */
+  --c7cc-total-bg: #0f0c08;
+  --c7cc-total-ink: #efe3c6;
+  --c7cc-total-border: #7d6128;
+  --c7cc-fail-bg: #2a1010;           --c7cc-fail-ink: #e06c5f;
+  --c7cc-regular-bg: #2a2114;        --c7cc-regular-ink: #ecd08a;
+  --c7cc-hard-bg: linear-gradient(180deg, #d9b45e, #a8832f);  --c7cc-hard-ink: #15110c;
+  --c7cc-extreme-bg: linear-gradient(180deg, #f3dc98, #c9a24a); --c7cc-extreme-ink: #15110c;
+  --c7cc-critical-bg: repeating-conic-gradient(from 0deg at 50% 120%, #15110c 0deg 6deg, #2a2114 6deg 12deg);
+  --c7cc-critical-ink: #ffe9a8;
+  --c7cc-fumble-bg: #000000;         --c7cc-fumble-ink: #ff3b3b;
+
+  --c7cc-success-ink: #ecd08a;
+  --c7cc-failure-ink: #e06c5f;
+  --c7cc-icon-success: #ecd08a;
+  --c7cc-icon-failure: #e06c5f;
+  --c7cc-whisper-ink: #9fb6d6;
+}
+
+/* ---------- Thème : Par-delà les Montagnes Hallucinées
+   (carnet de l'expédition Miskatonic, Antarctique 1930-1931) ---------- */
+body.c7cc-montagnes {
+  --c7cc-bg:
+    linear-gradient(180deg, rgba(186, 214, 232, 0.55) 0%, rgba(255, 255, 255, 0) 22%),
+    repeating-linear-gradient(0deg, transparent 0 21px, rgba(60, 100, 140, 0.10) 21px 22px),
+    linear-gradient(180deg, #f4f6f2 0%, #e7e9e1 100%);
+  --c7cc-bg-plain: #eef0ea;
+  --c7cc-border: #3f6a8e;
+  --c7cc-border-outer: #9fb9cc;
+  --c7cc-ink: #1d2b3a;
+  --c7cc-ink-dim: #4f6274;
+  --c7cc-accent: #23415e;
+  --c7cc-rule: linear-gradient(90deg, transparent, #3f6a8e, transparent);
+  --c7cc-shadow: 0 3px 10px rgba(20, 45, 70, 0.35);
+  --c7cc-corner: #7fa7c4;
+
+  --c7cc-font-title: "C7CC IM Fell SC", "IM Fell English SC", Georgia, serif;
+  --c7cc-font-label: "C7CC IM Fell", "IM Fell English", Georgia, serif;
+  --c7cc-font-body: "C7CC Special Elite", "Special Elite", "Courier New", monospace;
+  --c7cc-label-weight: 400;
+  --c7cc-title-size: 16px;
+  --c7cc-font-total: var(--c7cc-font-body);
+  --c7cc-total-size: 21px;
+
+  --c7cc-button-bg: #e3ebf0;
+  --c7cc-button-ink: #23415e;
+  --c7cc-button-border: #7fa7c4;
+  --c7cc-button-hover: #cfe0ec;
+
+  --c7cc-level-bg: rgba(63, 106, 142, 0.07);
+  --c7cc-level-border: #9fb9cc;
+
+  --c7cc-total-bg: #f8faf7;
+  --c7cc-total-ink: #1d2b3a;
+  --c7cc-total-border: #9fb9cc;
+  --c7cc-fail-bg: #f6ece9;           --c7cc-fail-ink: #a3222a;
+  --c7cc-regular-bg: #e8f0f5;        --c7cc-regular-ink: #23415e;
+  --c7cc-hard-bg: linear-gradient(180deg, #cfe2ef, #a9c8de);   --c7cc-hard-ink: #142a40;
+  --c7cc-extreme-bg: linear-gradient(180deg, #a9c8de, #6f9cbd); --c7cc-extreme-ink: #0b1c2c;
+  --c7cc-critical-bg: linear-gradient(180deg, #23415e, #142a40);
+  --c7cc-critical-ink: #ffffff;
+  --c7cc-fumble-bg: #2a0b0e;         --c7cc-fumble-ink: #ff6b6b;
+
+  --c7cc-success-ink: #23415e;
+  --c7cc-failure-ink: #a3222a;
+  --c7cc-icon-success: #3f6a8e;
+  --c7cc-icon-failure: #a3222a;
+  --c7cc-whisper-ink: #6b4f8a;
+}
+
+/* ==========================================================================
+   Structure commune
+   ========================================================================== */
+
+body.c7cc-on .chat-message:not(.cthud-card) {
+  position: relative;
+  background: var(--c7cc-bg) !important;
+  color: var(--c7cc-ink) !important;
+  border: 1px solid var(--c7cc-border) !important;
+  outline: 1px solid var(--c7cc-border-outer);
+  outline-offset: -4px;
+  border-radius: 0 !important;
+  box-shadow: var(--c7cc-shadow) !important;
+  font-family: var(--c7cc-font-body);
+  padding: 8px 10px 9px !important;
+  margin-bottom: 8px;
+}
+
+/* Coins décoratifs */
+body.c7cc-on .chat-message:not(.cthud-card)::before,
+body.c7cc-on .chat-message:not(.cthud-card)::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--c7cc-corner);
+  pointer-events: none;
+}
+body.c7cc-on .chat-message:not(.cthud-card)::before {
+  top: -3px; left: -3px;
+  border-right: none; border-bottom: none;
+}
+body.c7cc-on .chat-message:not(.cthud-card)::after {
+  bottom: -3px; right: -3px;
+  border-left: none; border-top: none;
+}
+
+/* En-tête : nom, heure, corbeille */
+body.c7cc-on .chat-message:not(.cthud-card) .message-header {
+  color: var(--c7cc-ink-dim);
+  border-bottom: none;
+  margin-bottom: 4px;
+  position: relative;
+  padding-bottom: 5px;
+}
+body.c7cc-on .chat-message:not(.cthud-card) .message-header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--c7cc-rule);
+}
+body.c7cc-on .chat-message:not(.cthud-card) .message-sender {
+  font-family: var(--c7cc-font-title);
+  font-size: var(--c7cc-title-size);
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  color: var(--c7cc-accent) !important;
+}
+body.c7cc-on .chat-message:not(.cthud-card) .message-metadata,
+body.c7cc-on .chat-message:not(.cthud-card) .message-timestamp,
+body.c7cc-on .chat-message:not(.cthud-card) .message-delete,
+body.c7cc-on .chat-message:not(.cthud-card) .whisper-to {
+  color: var(--c7cc-ink-dim) !important;
+  font-family: var(--c7cc-font-label);
+  font-weight: var(--c7cc-label-weight);
+}
+body.c7cc-on .chat-message:not(.cthud-card) .whisper-to {
+  color: var(--c7cc-whisper-ink) !important;
+  font-style: italic;
+}
+
+/* Ligne « jet de Force (70 %) - difficulté ordinaire » */
+body.c7cc-on .chat-message:not(.cthud-card) .flavor-text {
+  font-family: var(--c7cc-font-label);
+  font-weight: var(--c7cc-label-weight);
+  font-size: 13px;
+  color: var(--c7cc-ink) !important;
+  font-style: italic;
+}
+
+body.c7cc-on .chat-message:not(.cthud-card) .message-content {
+  color: var(--c7cc-ink);
+}
+body.c7cc-on .chat-message:not(.cthud-card) .message-content a:not(.content-link):not(.inline-roll) {
+  color: var(--c7cc-accent);
+}
+
+/* Bloc du jet */
+body.c7cc-on .chat-message .dice-roll .dice-result {
+  border: none;
+  background: none;
+}
+
+/* Bandeau « Réussite majeure ★★ » */
+body.c7cc-on .chat-message .dice-roll .dice-formula {
+  background: var(--c7cc-level-bg) !important;
+  border: 1px solid var(--c7cc-level-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--c7cc-font-label);
+  font-weight: var(--c7cc-label-weight);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--c7cc-ink) !important;
+  padding: 3px 6px;
+}
+body.c7cc-on .chat-message .dice-roll .dice-formula.success { color: var(--c7cc-success-ink) !important; }
+body.c7cc-on .chat-message .dice-roll .dice-formula.failure { color: var(--c7cc-failure-ink) !important; }
+body.c7cc-on .chat-message .dice-roll .dice-formula.success .roll-icons { color: var(--c7cc-icon-success) !important; }
+body.c7cc-on .chat-message .dice-roll .dice-formula.failure .roll-icons { color: var(--c7cc-icon-failure) !important; }
+body.c7cc-on .chat-message .dice-roll .dice-formula.critical {
+  background: var(--c7cc-critical-bg) !important;
+  color: var(--c7cc-critical-ink) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-formula.fumble {
+  background: var(--c7cc-fumble-bg) !important;
+  color: var(--c7cc-fumble-ink) !important;
+}
+
+/* Chiffre du jet */
+body.c7cc-on .chat-message .dice-roll .dice-total {
+  background: var(--c7cc-total-bg) !important;
+  color: var(--c7cc-total-ink) !important;
+  border: 1px solid var(--c7cc-total-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--c7cc-font-total);
+  font-weight: normal;
+  font-size: var(--c7cc-total-size);
+  letter-spacing: 0.06em;
+  line-height: 32px;
+  margin-top: 4px;
+  text-shadow: none;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.failure {
+  background: var(--c7cc-fail-bg) !important;
+  color: var(--c7cc-fail-ink) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.success-regular {
+  background: var(--c7cc-regular-bg) !important;
+  color: var(--c7cc-regular-ink) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.success-hard {
+  background: var(--c7cc-hard-bg) !important;
+  color: var(--c7cc-hard-ink) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.success-extreme {
+  background: var(--c7cc-extreme-bg) !important;
+  color: var(--c7cc-extreme-ink) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.critical {
+  background: var(--c7cc-critical-bg) !important;
+  color: var(--c7cc-critical-ink) !important;
+  border-color: var(--c7cc-border) !important;
+}
+body.c7cc-on .chat-message .dice-roll .dice-total.fumble {
+  background: var(--c7cc-fumble-bg) !important;
+  color: var(--c7cc-fumble-ink) !important;
+}
+
+/* Détail des dés (déplié) */
+body.c7cc-on .chat-message .dice-tooltip,
+body.c7cc-on .chat-message .dice-tooltip .tooltip-part {
+  background: transparent;
+  color: var(--c7cc-ink);
+}
+body.c7cc-on .chat-message .dice-tooltip .part-header {
+  border-bottom: 1px solid var(--c7cc-level-border);
+  font-family: var(--c7cc-font-label);
+}
+
+/* Boutons (Redoubler, Dépenser la Chance, Fermer la carte…) */
+body.c7cc-on .chat-message .coc7-card-buttons button,
+body.c7cc-on .chat-message .card-buttons button {
+  background: var(--c7cc-button-bg) !important;
+  color: var(--c7cc-button-ink) !important;
+  border: 1px solid var(--c7cc-button-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: var(--c7cc-font-label);
+  font-weight: var(--c7cc-label-weight);
+  letter-spacing: 0.05em;
+  font-size: 13px;
+}
+body.c7cc-on .chat-message .coc7-card-buttons button:hover,
+body.c7cc-on .chat-message .card-buttons button:hover {
+  background: var(--c7cc-button-hover) !important;
+  border-color: var(--c7cc-border) !important;
+}
+body.c7cc-on .chat-message .coc7-card-buttons button.switched-on {
+  border-color: var(--c7cc-border) !important;
+  box-shadow: inset 0 0 0 1px var(--c7cc-border) !important;
+}
+
+/* En-têtes de cartes de combat CoC7 */
+body.c7cc-on .chat-message .coc7-chat-header {
+  border-top: 1px solid var(--c7cc-border);
+  border-bottom: 1px solid var(--c7cc-border);
+}
+body.c7cc-on .chat-message .coc7-chat-header .card-title {
+  font-family: var(--c7cc-font-title);
+  font-weight: normal;
+  color: var(--c7cc-accent);
+}
+
+/* Séparateur « Round End » / fin de round */
+body.c7cc-on #chat .chat-log > .message-divider,
+body.c7cc-on .chat-log .round-divider {
+  font-family: var(--c7cc-font-label);
+  color: var(--c7cc-ink-dim);
+}
+
+/* Messages chuchotés / aveugles : un petit liseré */
+body.c7cc-on .chat-message:not(.cthud-card).whisper {
+  outline-style: dashed;
+}
+
+/* ---------- Touches propres aux Montagnes Hallucinées ---------- */
+
+/* Échecs et maladresses : tampon d'archive à l'encre rouge */
+body.c7cc-montagnes .chat-message .dice-roll .dice-total.failure,
+body.c7cc-montagnes .chat-message .dice-roll .dice-total.fumble {
+  border: 3px double var(--c7cc-fail-ink) !important;
+  transform: rotate(-1.2deg);
+}
+/* Givre sur le bord supérieur de la carte */
+body.c7cc-montagnes .chat-message:not(.cthud-card) {
+  border-top: 3px solid #cfe2ef !important;
+}
+/* Chiffres lisibles dans les mentions de pourcentage */
+body.c7cc-montagnes .chat-message:not(.cthud-card) .flavor-text {
+  font-variant-numeric: lining-nums;
+}
+body.c7cc-montagnes .chat-message:not(.cthud-card) .message-sender::before {
+  content: "✻ ";
+  color: #7fa7c4;
+}
+
+/* ---------- Touches propres aux Années 20 ---------- */
+body.c7cc-annees20 .chat-message:not(.cthud-card) .message-sender::before,
+body.c7cc-annees20 .chat-message:not(.cthud-card) .message-sender::after {
+  content: "◆";
+  font-size: 8px;
+  vertical-align: middle;
+  color: #c9a24a;
+  margin: 0 5px;
+}
+body.c7cc-annees20 .chat-message:not(.cthud-card) .message-sender::before { margin-left: 0; }
+
+
+/* ---------- Thème : New York années 20 (Manhattan, Chrysler, Broadway) ---------- */
+body.c7cc-newyork {
+  --c7cc-skyline: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%2040%22%20preserveAspectRatio%3D%22none%22%3E%3Cg%20fill%3D%22%23c8d2df%22%20fill-opacity%3D%220.22%22%3E%0A%3Crect%20x%3D%220%22%20y%3D%2226%22%20width%3D%2218%22%20height%3D%2214%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2218%22%20width%3D%2214%22%20height%3D%2222%22/%3E%3Crect%20x%3D%2230%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2216%22/%3E%0A%3Crect%20x%3D%2242%22%20y%3D%2212%22%20width%3D%2216%22%20height%3D%2228%22/%3E%3Crect%20x%3D%2247%22%20y%3D%227%22%20width%3D%226%22%20height%3D%225%22/%3E%3Crect%20x%3D%2258%22%20y%3D%2222%22%20width%3D%2220%22%20height%3D%2218%22/%3E%0A%3Crect%20x%3D%2278%22%20y%3D%2215%22%20width%3D%2212%22%20height%3D%2225%22/%3E%3Crect%20x%3D%2290%22%20y%3D%2227%22%20width%3D%2216%22%20height%3D%2213%22/%3E%3Crect%20x%3D%22106%22%20y%3D%2219%22%20width%3D%2214%22%20height%3D%2221%22/%3E%0A%3Crect%20x%3D%22120%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2216%22/%3E%3Crect%20x%3D%22132%22%20y%3D%2214%22%20width%3D%2216%22%20height%3D%2226%22/%3E%0A%3Cpolygon%20points%3D%22148%2C40%20148%2C12%20151%2C10%20151%2C6%20153%2C4%20153%2C1%20154%2C0%20155%2C1%20155%2C4%20157%2C6%20157%2C10%20160%2C12%20160%2C40%22/%3E%0A%3Crect%20x%3D%22160%22%20y%3D%2220%22%20width%3D%2216%22%20height%3D%2220%22/%3E%3Crect%20x%3D%22176%22%20y%3D%2210%22%20width%3D%2214%22%20height%3D%2230%22/%3E%3Crect%20x%3D%22181%22%20y%3D%225%22%20width%3D%224%22%20height%3D%225%22/%3E%0A%3Crect%20x%3D%22190%22%20y%3D%2225%22%20width%3D%2218%22%20height%3D%2215%22/%3E%3Crect%20x%3D%22208%22%20y%3D%2217%22%20width%3D%2212%22%20height%3D%2223%22/%3E%3Crect%20x%3D%22220%22%20y%3D%2223%22%20width%3D%2216%22%20height%3D%2217%22/%3E%0A%3Crect%20x%3D%22236%22%20y%3D%2213%22%20width%3D%2214%22%20height%3D%2227%22/%3E%3Crect%20x%3D%22250%22%20y%3D%2221%22%20width%3D%2218%22%20height%3D%2219%22/%3E%3Crect%20x%3D%22268%22%20y%3D%2227%22%20width%3D%2214%22%20height%3D%2213%22/%3E%3Crect%20x%3D%22282%22%20y%3D%2220%22%20width%3D%2218%22%20height%3D%2220%22/%3E%0A%3C/g%3E%3C/svg%3E");
+  --c7cc-bg:
+    radial-gradient(ellipse at 50% 0%, rgba(120, 150, 200, 0.18), transparent 60%),
+    linear-gradient(180deg, #121c2e 0%, #0b1220 100%);
+  --c7cc-bg-plain: #0e1726;
+  --c7cc-border: #c8d2df;
+  --c7cc-border-outer: #5d6b80;
+  --c7cc-ink: #e9edf3;
+  --c7cc-ink-dim: #9aa8bb;
+  --c7cc-accent: #f2f5f9;
+  --c7cc-rule: linear-gradient(90deg, transparent, #c8d2df, transparent);
+  --c7cc-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  --c7cc-corner: #f6c560;
+
+  --c7cc-font-title: "C7CC Poiret One", "Poiret One", "Futura", sans-serif;
+  --c7cc-font-label: "C7CC Poiret One", "Poiret One", "Futura", sans-serif;
+  --c7cc-font-body: "C7CC Poiret One", "Poiret One", "Futura", sans-serif;
+  --c7cc-label-weight: 600;
+  --c7cc-title-size: 16px;
+  --c7cc-font-total: "C7CC Limelight", "Limelight", Georgia, serif;
+  --c7cc-total-size: 22px;
+
+  --c7cc-button-bg: #0b1220;
+  --c7cc-button-ink: #e9edf3;
+  --c7cc-button-border: #5d6b80;
+  --c7cc-button-hover: #1b2840;
+
+  --c7cc-level-bg: rgba(200, 210, 223, 0.06);
+  --c7cc-level-border: #5d6b80;
+
+  --c7cc-total-bg: #0b1220;
+  --c7cc-total-ink: #e9edf3;
+  --c7cc-total-border: #5d6b80;
+  --c7cc-fail-bg: #1a0d14;           --c7cc-fail-ink: #ff4d6d;
+  --c7cc-regular-bg: linear-gradient(180deg, #1d2a42, #142036); --c7cc-regular-ink: #e9edf3;
+  --c7cc-hard-bg: linear-gradient(180deg, #e3e8ef, #9aa8bb);    --c7cc-hard-ink: #0b1220;
+  --c7cc-extreme-bg: linear-gradient(180deg, #ffe4a3, #f6c560); --c7cc-extreme-ink: #2a1a00;
+  --c7cc-critical-bg: linear-gradient(180deg, #3a2500, #1e1300);
+  --c7cc-critical-ink: #ffe9b0;
+  --c7cc-fumble-bg: #000000;         --c7cc-fumble-ink: #ff2a55;
+
+  --c7cc-success-ink: #f2f5f9;
+  --c7cc-failure-ink: #ff4d6d;
+  --c7cc-icon-success: #f6c560;
+  --c7cc-icon-failure: #ff4d6d;
+  --c7cc-whisper-ink: #8fd3c8;
+}
+
+/* Silhouette de Manhattan au bas de chaque carte */
+body.c7cc-newyork .chat-message:not(.cthud-card) {
+  background:
+    var(--c7cc-skyline) bottom center / 100% 28px no-repeat,
+    var(--c7cc-bg) !important;
+  padding-bottom: 30px !important;
+}
+body.c7cc-newyork .chat-message:not(.cthud-card) .message-content {
+  position: relative;
+}
+
+/* Nom : capitales espacées façon façade de gratte-ciel, flèche du Chrysler */
+body.c7cc-newyork .chat-message:not(.cthud-card) .message-sender {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 13px;
+}
+body.c7cc-newyork .chat-message:not(.cthud-card) .message-sender::before {
+  content: "▲ ";
+  font-size: 9px;
+  color: #c8d2df;
+  vertical-align: middle;
+}
+
+/* Échecs : néon rouge */
+body.c7cc-newyork .chat-message .dice-roll .dice-total.failure,
+body.c7cc-newyork .chat-message .dice-roll .dice-total.fumble {
+  text-shadow: 0 0 6px #ff4d6d, 0 0 14px rgba(255, 42, 85, 0.6);
+  border-color: #ff4d6d !important;
+}
+/* Critique : enseigne de Broadway, ampoules autour du chiffre */
+body.c7cc-newyork .chat-message .dice-roll .dice-total.critical {
+  border: 6px solid transparent !important;
+  background:
+    linear-gradient(180deg, #3a2500, #1e1300) padding-box,
+    radial-gradient(circle, #ffd479 0 2px, #6b4a00 2.5px 100%) 0 0 / 10px 10px border-box !important;
+  color: #ffe9b0 !important;
+  text-shadow: 0 0 8px #ffd479;
+  line-height: 26px;
+  animation: c7cc-marquee 1.2s steps(2) infinite;
+}
+body.c7cc-newyork .chat-message .dice-roll .dice-formula.critical {
+  color: #ffd479 !important;
+  text-shadow: 0 0 6px rgba(255, 212, 121, 0.7);
+}
+body.c7cc-newyork .chat-message .dice-roll .dice-total.success-extreme {
+  box-shadow: 0 0 10px rgba(246, 197, 96, 0.55) !important;
+}
+@keyframes c7cc-marquee {
+  50% { background-position: 0 0, 5px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.c7cc-newyork .chat-message .dice-roll .dice-total.critical { animation: none; }
+}
+
+/* ---------- Cohérence avec Combat Cthulhu HUD (thème Années 20) ----------
+   Les cartes du HUD passent du papier clair au noir et or du chat. */
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-cards {
+  background: linear-gradient(180deg, #1a140d, #110d08);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.6);
+}
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list > .chat-message {
+  background: linear-gradient(180deg, #211a11, #15110c);
+  border-color: #7d6128;
+  color: #efe3c6;
+}
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list > .chat-message:first-child {
+  border-color: #c9a24a;
+  box-shadow: 0 0 0 1px #c9a24a, 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list .message-sender {
+  font-family: var(--c7cc-font-title);
+  font-weight: normal;
+  color: #ecd08a;
+}
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list .flavor-text { color: #b9a984; }
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-cards .cthud-empty,
+body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-dismiss { color: #b9a984; }

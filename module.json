@@ -1,0 +1,66 @@
+{
+  "id": "coc7-cartes-chat",
+  "title": "CoC7 – Cartes de chat thématiques",
+  "description": "Habille le chat et les cartes de jets de L'Appel de Cthulhu v7 : thèmes années 20 (Art Déco, New York, Montagnes Hallucinées) et modernes (New York 2026, Antarctique 2026). Peut appliquer le même thème au HUD de combat et à Token Action HUD ; le Gardien peut l'imposer à toute la table.",
+  "version": "1.2.0",
+  "authors": [
+    {
+      "name": "magisterphamtom",
+      "url": "https://github.com/magisterphamtom"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14.368"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "CoC7",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.14",
+          "verified": "8.15"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "combatcthud",
+        "type": "module",
+        "reason": "Le HUD de combat peut suivre le thème du chat (version 0.4.0 ou plus)."
+      },
+      {
+        "id": "tah-annees-20",
+        "type": "module",
+        "reason": "Token Action HUD peut suivre le thème du chat."
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/fonts.css",
+    "styles/cartes.css",
+    "styles/cartes-2026.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/magisterphamtom/coc7-cartes-chat",
+  "manifest": "https://github.com/magisterphamtom/coc7-cartes-chat/releases/latest/download/module.json",
+  "download": "https://github.com/magisterphamtom/coc7-cartes-chat/releases/download/v1.2.0/module.zip",
+  "bugs": "https://github.com/magisterphamtom/coc7-cartes-chat/issues",
+  "readme": "https://github.com/magisterphamtom/coc7-cartes-chat/blob/main/README.md",
+  "license": "MIT"
+}

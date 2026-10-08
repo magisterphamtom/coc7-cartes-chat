@@ -1,0 +1,27 @@
+{
+  "C7CC": {
+    "Themes": {
+      "none": "None (original CoC7 style)",
+      "annees20": "1920s (black and gold Art Deco)",
+      "montagnes": "At the Mountains of Madness (expedition notebook)",
+      "newyork": "1920s New York (Manhattan, Broadway)",
+      "ny2026": "New York 2026 (glass, LED and subway)",
+      "antarctique2026": "Antarctica 2026 (polar research station)"
+    },
+    "Settings": {
+      "Theme": {
+        "Name": "Chat card theme",
+        "Hint": "Look of chat messages and CoC7 roll cards, for this browser."
+      },
+      "Force": {
+        "Name": "Theme forced for the whole table",
+        "Hint": "GM only. If a theme is chosen here, it applies to every player instead of their own choice.",
+        "Free": "Let everyone choose"
+      },
+      "Sync": {
+        "Name": "Also apply to the combat HUD and Token Action HUD",
+        "Hint": "Checked: the theme chosen here is also applied to Combat Cthulhu HUD (0.4.0 or later) and Token Action HUD (\"Token Action HUD – 1920s themes\" module), for a consistent table. Also works with the theme forced by the GM."
+      }
+    }
+  }
+}

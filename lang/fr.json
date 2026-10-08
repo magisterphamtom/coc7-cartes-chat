@@ -1,0 +1,27 @@
+{
+  "C7CC": {
+    "Themes": {
+      "none": "Aucun (style CoC7 d'origine)",
+      "annees20": "Années 20 (Art Déco noir et or)",
+      "montagnes": "Par-delà les Montagnes Hallucinées (carnet d'expédition)",
+      "newyork": "New York années 20 (Manhattan, Broadway)",
+      "ny2026": "New York 2026 (verre, LED et métro)",
+      "antarctique2026": "Antarctique 2026 (station de recherche polaire)"
+    },
+    "Settings": {
+      "Theme": {
+        "Name": "Thème des cartes du chat",
+        "Hint": "Apparence des messages et des cartes de jets CoC7 dans le chat, pour ce navigateur."
+      },
+      "Force": {
+        "Name": "Thème imposé à toute la table",
+        "Hint": "Réservé au Gardien. Si un thème est choisi ici, il s'applique à tous les joueurs à la place de leur propre choix.",
+        "Free": "Laisser chacun choisir"
+      },
+      "Sync": {
+        "Name": "Appliquer aussi au HUD de combat et à Token Action HUD",
+        "Hint": "Coché : le thème choisi ici est aussi appliqué à Combat Cthulhu HUD (0.4.0 ou plus) et à Token Action HUD (module « Token Action HUD – Thèmes années 20 »), pour une table cohérente. Fonctionne aussi avec le thème imposé par le Gardien."
+      }
+    }
+  }
+}
