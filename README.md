@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/banner.png" alt="coc7-cartes-chat" width="100%"></p>
+
 # CoC7 – Cartes de chat thématiques
 
 Habille le chat de Foundry VTT et les **cartes de jets de L'Appel de Cthulhu v7** (système CoC7) d'un thème d'ambiance. Seule l'apparence change : aucune carte, aucun jet n'est modifié.
