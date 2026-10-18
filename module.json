@@ -62,5 +62,11 @@
   "download": "https://github.com/magisterphamtom/coc7-cartes-chat/releases/download/v1.2.0/module.zip",
   "bugs": "https://github.com/magisterphamtom/coc7-cartes-chat/issues",
   "readme": "https://github.com/magisterphamtom/coc7-cartes-chat/blob/main/README.md",
-  "license": "MIT"
+  "license": "MIT",
+  "media": [
+    {
+      "type": "cover",
+      "url": "https://raw.githubusercontent.com/magisterphamtom/coc7-cartes-chat/main/.github/banner.png"
+    }
+  ]
 }
