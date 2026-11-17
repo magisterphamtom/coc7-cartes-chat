@@ -194,13 +194,13 @@ body.c7cc-on .chat-message:not(.cthud-card) .message-content a:not(.content-link
 }
 
 /* Bloc du jet */
-body.c7cc-on .chat-message .dice-roll .dice-result {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-result {
   border: none;
   background: none;
 }
 
 /* Bandeau « Réussite majeure ★★ » */
-body.c7cc-on .chat-message .dice-roll .dice-formula {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula {
   background: var(--c7cc-level-bg) !important;
   border: 1px solid var(--c7cc-level-border) !important;
   border-radius: 0 !important;
@@ -212,21 +212,21 @@ body.c7cc-on .chat-message .dice-roll .dice-formula {
   color: var(--c7cc-ink) !important;
   padding: 3px 6px;
 }
-body.c7cc-on .chat-message .dice-roll .dice-formula.success { color: var(--c7cc-success-ink) !important; }
-body.c7cc-on .chat-message .dice-roll .dice-formula.failure { color: var(--c7cc-failure-ink) !important; }
-body.c7cc-on .chat-message .dice-roll .dice-formula.success .roll-icons { color: var(--c7cc-icon-success) !important; }
-body.c7cc-on .chat-message .dice-roll .dice-formula.failure .roll-icons { color: var(--c7cc-icon-failure) !important; }
-body.c7cc-on .chat-message .dice-roll .dice-formula.critical {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.success { color: var(--c7cc-success-ink) !important; }
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.failure { color: var(--c7cc-failure-ink) !important; }
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.success .roll-icons { color: var(--c7cc-icon-success) !important; }
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.failure .roll-icons { color: var(--c7cc-icon-failure) !important; }
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.critical {
   background: var(--c7cc-critical-bg) !important;
   color: var(--c7cc-critical-ink) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-formula.fumble {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-formula.fumble {
   background: var(--c7cc-fumble-bg) !important;
   color: var(--c7cc-fumble-ink) !important;
 }
 
 /* Chiffre du jet */
-body.c7cc-on .chat-message .dice-roll .dice-total {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total {
   background: var(--c7cc-total-bg) !important;
   color: var(--c7cc-total-ink) !important;
   border: 1px solid var(--c7cc-total-border) !important;
@@ -240,46 +240,46 @@ body.c7cc-on .chat-message .dice-roll .dice-total {
   margin-top: 4px;
   text-shadow: none;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.failure {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.failure {
   background: var(--c7cc-fail-bg) !important;
   color: var(--c7cc-fail-ink) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.success-regular {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.success-regular {
   background: var(--c7cc-regular-bg) !important;
   color: var(--c7cc-regular-ink) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.success-hard {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.success-hard {
   background: var(--c7cc-hard-bg) !important;
   color: var(--c7cc-hard-ink) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.success-extreme {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.success-extreme {
   background: var(--c7cc-extreme-bg) !important;
   color: var(--c7cc-extreme-ink) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.critical {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.critical {
   background: var(--c7cc-critical-bg) !important;
   color: var(--c7cc-critical-ink) !important;
   border-color: var(--c7cc-border) !important;
 }
-body.c7cc-on .chat-message .dice-roll .dice-total.fumble {
+body.c7cc-on .chat-message .message-content .dice-roll .dice-total.fumble {
   background: var(--c7cc-fumble-bg) !important;
   color: var(--c7cc-fumble-ink) !important;
 }
 
 /* Détail des dés (déplié) */
-body.c7cc-on .chat-message .dice-tooltip,
-body.c7cc-on .chat-message .dice-tooltip .tooltip-part {
+body.c7cc-on .chat-message .message-content .dice-tooltip,
+body.c7cc-on .chat-message .message-content .dice-tooltip .tooltip-part {
   background: transparent;
   color: var(--c7cc-ink);
 }
-body.c7cc-on .chat-message .dice-tooltip .part-header {
+body.c7cc-on .chat-message .message-content .dice-tooltip .part-header {
   border-bottom: 1px solid var(--c7cc-level-border);
   font-family: var(--c7cc-font-label);
 }
 
 /* Boutons (Redoubler, Dépenser la Chance, Fermer la carte…) */
-body.c7cc-on .chat-message .coc7-card-buttons button,
-body.c7cc-on .chat-message .card-buttons button {
+body.c7cc-on .chat-message .message-content .coc7-card-buttons button,
+body.c7cc-on .chat-message .message-content .card-buttons button {
   background: var(--c7cc-button-bg) !important;
   color: var(--c7cc-button-ink) !important;
   border: 1px solid var(--c7cc-button-border) !important;
@@ -290,22 +290,22 @@ body.c7cc-on .chat-message .card-buttons button {
   letter-spacing: 0.05em;
   font-size: 13px;
 }
-body.c7cc-on .chat-message .coc7-card-buttons button:hover,
-body.c7cc-on .chat-message .card-buttons button:hover {
+body.c7cc-on .chat-message .message-content .coc7-card-buttons button:hover,
+body.c7cc-on .chat-message .message-content .card-buttons button:hover {
   background: var(--c7cc-button-hover) !important;
   border-color: var(--c7cc-border) !important;
 }
-body.c7cc-on .chat-message .coc7-card-buttons button.switched-on {
+body.c7cc-on .chat-message .message-content .coc7-card-buttons button.switched-on {
   border-color: var(--c7cc-border) !important;
   box-shadow: inset 0 0 0 1px var(--c7cc-border) !important;
 }
 
 /* En-têtes de cartes de combat CoC7 */
-body.c7cc-on .chat-message .coc7-chat-header {
+body.c7cc-on .chat-message .message-content .coc7-chat-header {
   border-top: 1px solid var(--c7cc-border);
   border-bottom: 1px solid var(--c7cc-border);
 }
-body.c7cc-on .chat-message .coc7-chat-header .card-title {
+body.c7cc-on .chat-message .message-content .coc7-chat-header .card-title {
   font-family: var(--c7cc-font-title);
   font-weight: normal;
   color: var(--c7cc-accent);
@@ -326,8 +326,8 @@ body.c7cc-on .chat-message:not(.cthud-card).whisper {
 /* ---------- Touches propres aux Montagnes Hallucinées ---------- */
 
 /* Échecs et maladresses : tampon d'archive à l'encre rouge */
-body.c7cc-montagnes .chat-message .dice-roll .dice-total.failure,
-body.c7cc-montagnes .chat-message .dice-roll .dice-total.fumble {
+body.c7cc-montagnes .chat-message .message-content .dice-roll .dice-total.failure,
+body.c7cc-montagnes .chat-message .message-content .dice-roll .dice-total.fumble {
   border: 3px double var(--c7cc-fail-ink) !important;
   transform: rotate(-1.2deg);
 }
@@ -431,13 +431,13 @@ body.c7cc-newyork .chat-message:not(.cthud-card) .message-sender::before {
 }
 
 /* Échecs : néon rouge */
-body.c7cc-newyork .chat-message .dice-roll .dice-total.failure,
-body.c7cc-newyork .chat-message .dice-roll .dice-total.fumble {
+body.c7cc-newyork .chat-message .message-content .dice-roll .dice-total.failure,
+body.c7cc-newyork .chat-message .message-content .dice-roll .dice-total.fumble {
   text-shadow: 0 0 6px #ff4d6d, 0 0 14px rgba(255, 42, 85, 0.6);
   border-color: #ff4d6d !important;
 }
 /* Critique : enseigne de Broadway, ampoules autour du chiffre */
-body.c7cc-newyork .chat-message .dice-roll .dice-total.critical {
+body.c7cc-newyork .chat-message .message-content .dice-roll .dice-total.critical {
   border: 6px solid transparent !important;
   background:
     linear-gradient(180deg, #3a2500, #1e1300) padding-box,
@@ -447,18 +447,18 @@ body.c7cc-newyork .chat-message .dice-roll .dice-total.critical {
   line-height: 26px;
   animation: c7cc-marquee 1.2s steps(2) infinite;
 }
-body.c7cc-newyork .chat-message .dice-roll .dice-formula.critical {
+body.c7cc-newyork .chat-message .message-content .dice-roll .dice-formula.critical {
   color: #ffd479 !important;
   text-shadow: 0 0 6px rgba(255, 212, 121, 0.7);
 }
-body.c7cc-newyork .chat-message .dice-roll .dice-total.success-extreme {
+body.c7cc-newyork .chat-message .message-content .dice-roll .dice-total.success-extreme {
   box-shadow: 0 0 10px rgba(246, 197, 96, 0.55) !important;
 }
 @keyframes c7cc-marquee {
   50% { background-position: 0 0, 5px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  body.c7cc-newyork .chat-message .dice-roll .dice-total.critical { animation: none; }
+  body.c7cc-newyork .chat-message .message-content .dice-roll .dice-total.critical { animation: none; }
 }
 
 /* ---------- Cohérence avec Combat Cthulhu HUD (thème Années 20) ----------

@@ -78,32 +78,32 @@ body.c7cc-ny2026 .chat-message:not(.cthud-card) .flavor-text {
   font-style: normal;
   color: #c7ccd4 !important;
 }
-body.c7cc-ny2026 .chat-message .dice-roll .dice-formula {
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-formula {
   border-radius: 6px !important;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.08em;
   font-weight: 600;
 }
-body.c7cc-ny2026 .chat-message .dice-roll .dice-total {
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-total {
   border-radius: 6px !important;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 /* Critique : afficheur LED jaune du métro */
-body.c7cc-ny2026 .chat-message .dice-roll .dice-total.critical,
-body.c7cc-ny2026 .chat-message .dice-roll .dice-formula.critical {
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-total.critical,
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-formula.critical {
   border: 1px solid #fccc0a !important;
   text-shadow: 0 0 6px rgba(252, 204, 10, 0.9);
   box-shadow: 0 0 12px rgba(252, 204, 10, 0.35), inset 0 0 0 1px rgba(252, 204, 10, 0.25) !important;
   background-image: radial-gradient(circle, rgba(252, 204, 10, 0.10) 0 1px, transparent 1.5px) !important;
   background-size: 4px 4px !important;
 }
-body.c7cc-ny2026 .chat-message .dice-roll .dice-total.failure,
-body.c7cc-ny2026 .chat-message .dice-roll .dice-total.fumble {
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-total.failure,
+body.c7cc-ny2026 .chat-message .message-content .dice-roll .dice-total.fumble {
   text-shadow: 0 0 8px rgba(238, 53, 46, 0.7);
 }
-body.c7cc-ny2026 .chat-message .coc7-card-buttons button {
+body.c7cc-ny2026 .chat-message .message-content .coc7-card-buttons button {
   border-radius: 6px !important;
 }
 
@@ -180,31 +180,31 @@ body.c7cc-antarctique2026 .chat-message:not(.cthud-card) .message-sender::before
 body.c7cc-antarctique2026 .chat-message:not(.cthud-card) .flavor-text {
   font-style: normal;
 }
-body.c7cc-antarctique2026 .chat-message .dice-roll .dice-formula {
+body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-formula {
   border-radius: 5px !important;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.1em;
   font-weight: 600;
 }
-body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total {
+body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-total {
   border-radius: 5px !important;
   font-weight: 700;
 }
-body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.critical {
+body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-total.critical {
   background-size: 200% 100% !important;
   animation: c7cc-aurora 6s ease-in-out infinite alternate;
 }
-body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.failure,
-body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.fumble {
+body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-total.failure,
+body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-total.fumble {
   background-image: repeating-linear-gradient(-45deg, transparent 0 8px, rgba(255, 106, 19, 0.12) 8px 16px) !important;
 }
-body.c7cc-antarctique2026 .chat-message .coc7-card-buttons button {
+body.c7cc-antarctique2026 .chat-message .message-content .coc7-card-buttons button {
   border-radius: 5px !important;
 }
 @keyframes c7cc-aurora {
   to { background-position: 100% 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  body.c7cc-antarctique2026 .chat-message .dice-roll .dice-total.critical { animation: none; }
+  body.c7cc-antarctique2026 .chat-message .message-content .dice-roll .dice-total.critical { animation: none; }
 }
