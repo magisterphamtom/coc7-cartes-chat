@@ -23,6 +23,10 @@ Habille le chat de Foundry VTT et les **cartes de jets de L'Appel de Cthulhu v7*
 
 Le niveau de réussite reste lisible d'un coup d'œil : couleur différente pour ordinaire, majeure, extrême, critique, échec et maladresse.
 
+## Pousser le jet et dépenser la Chance (1.3)
+
+Sous un jet raté, les boutons **Pousser le jet** et **Dépenser de la Chance** s'affichent directement sous le résultat (CoC7 les range dans le détail des dés, qu'il faut sinon déplier), avec la **Chance disponible** et ce qui **restera** après chaque dépense (« Dépenser 15 points de Chance (reste 30) »). Seuls le Gardien et le joueur du personnage les voient. Réglage : « Boutons Pousser / Chance toujours visibles ».
+
 ## Réglages
 
 | Réglage | Portée | Rôle |

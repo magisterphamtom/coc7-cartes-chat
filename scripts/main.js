@@ -121,6 +121,15 @@ Hooks.once('init', () => {
     onChange: applyTheme
   });
 
+  game.settings.register(ID, 'rattrapageVisible', {
+    name: 'C7CC.Settings.Rattrapage.Name',
+    hint: 'C7CC.Settings.Rattrapage.Hint',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: true
+  });
+
   applyTheme();
 });
 
@@ -138,4 +147,71 @@ Hooks.on('renderChatMessageHTML', (message, html) => {
     const name = (sender.textContent || '').trim().replace(/^["'«\s]+/, '');
     sender.dataset.initial = (name[0] || '?').toUpperCase();
   } catch (err) { /* purement décoratif */ }
+});
+
+/* -------------------------------------------- */
+/*  Pousser le jet / Dépenser la Chance :        */
+/*  boutons toujours visibles sous le résultat   */
+/*  (CoC7 les range dans le détail des dés, qui  */
+/*  est replié) + compteur de Chance.            */
+/* -------------------------------------------- */
+
+Hooks.on('renderChatMessageHTML', (message, html) => {
+  try {
+    if (!game.settings.get(ID, 'rattrapageVisible')) return;
+    if (typeof message.flags?.CoC7?.load?.as === 'undefined') return;
+    html.querySelectorAll('.dice-roll').forEach((roll) => {
+      const bloc = roll.querySelector('.dice-tooltip .owner-and-keeper-block.coc7-card-buttons');
+      if (!bloc) return;
+      const boutons = [...bloc.querySelectorAll('button[data-action="push"], button[data-action="luck"]')];
+      if (!boutons.length) return;
+
+      // Seuls le Gardien et le propriétaire du personnage voient ces boutons (CoC7 retire le bloc chez les autres)
+      let acteur = null;
+      try { acteur = bloc.dataset.actorUuid ? fromUuidSync(bloc.dataset.actorUuid) : null; } catch { acteur = null; }
+      acteur = acteur?.actor ?? acteur;
+      if (!game.user.isGM && !acteur?.isOwner) return;
+
+      const zone = document.createElement('div');
+      zone.className = 'c7cc-rattrapage coc7-card-buttons';
+      zone.dataset.actorUuid = bloc.dataset.actorUuid ?? '';
+
+      const chance = Number(acteur?.system?.attribs?.luck?.value);
+      const avecChance = boutons.some((b) => b.dataset.action === 'luck') && Number.isFinite(chance);
+      if (avecChance) {
+        const info = document.createElement('div');
+        info.className = 'c7cc-chance-info';
+        info.innerHTML = `<i class="fa-solid fa-clover"></i> ${game.i18n.format('C7CC.Rattrapage.Chance', { n: chance })}`;
+        zone.append(info);
+      }
+
+      for (const b of boutons) {
+        if (b.dataset.action === 'luck' && avecChance) {
+          const cout = parseInt(b.dataset.luckSpend, 10);
+          if (Number.isFinite(cout)) {
+            const reste = document.createElement('span');
+            reste.className = 'c7cc-reste';
+            reste.textContent = ` ${game.i18n.format('C7CC.Rattrapage.Reste', { n: chance - cout })}`;
+            b.append(reste);
+          }
+        }
+        if (b.dataset.action === 'push') {
+          // CoC7 replie le détail des dés avant de pousser : on lui laisse un élément « déplié » à replier
+          b.addEventListener('click', () => {
+            const li = b.closest('li.chat-message');
+            if (li && !li.querySelector('.expanded')) {
+              const leurre = document.createElement('span');
+              leurre.className = 'expanded c7cc-leurre';
+              leurre.hidden = true;
+              li.append(leurre);
+            }
+          }, { capture: true });
+        }
+        zone.append(b); // on déplace le bouton (ses écouteurs suivent)
+      }
+      roll.after(zone);
+    });
+  } catch (err) {
+    console.warn('coc7-cartes-chat | boutons Pousser / Chance', err);
+  }
 });

@@ -484,3 +484,10 @@ body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list .message-sender {
 body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-list .flavor-text { color: #b9a984; }
 body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-cards .cthud-empty,
 body.c7cc-annees20 #combatcthud.skin-noir20 .cthud-card-dismiss { color: #b9a984; }
+
+/* 1.3 — Pousser / Chance sous le résultat, avec compteur de Chance */
+.chat-message .message-content .c7cc-rattrapage { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.chat-message .message-content .c7cc-rattrapage button { flex: 1 1 100%; }
+.chat-message .message-content .c7cc-chance-info { flex-basis: 100%; text-align: center; font-size: 12px; font-weight: 600; color: #2f8f4e; }
+body.c7cc-on .chat-message .message-content .c7cc-chance-info { color: var(--c7cc-success-ink, #2f8f4e); font-family: var(--c7cc-font-label); }
+.chat-message .message-content .c7cc-rattrapage .c7cc-reste { opacity: .75; font-size: .9em; }

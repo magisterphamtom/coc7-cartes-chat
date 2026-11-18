@@ -21,7 +21,15 @@
       "Sync": {
         "Name": "Appliquer aussi au HUD de combat et à Token Action HUD",
         "Hint": "Coché : le thème choisi ici est aussi appliqué à Combat Cthulhu HUD (0.4.0 ou plus) et à Token Action HUD (module « Token Action HUD – Thèmes années 20 »), pour une table cohérente. Fonctionne aussi avec le thème imposé par le Gardien."
+      },
+      "Rattrapage": {
+        "Name": "Boutons Pousser / Chance toujours visibles",
+        "Hint": "Sous un jet raté, les boutons « Pousser le jet » et « Dépenser de la Chance » s'affichent directement sous le résultat (sans déplier le détail des dés), avec la Chance disponible et ce qui restera."
       }
+    },
+    "Rattrapage": {
+      "Chance": "Chance : {n}",
+      "Reste": "(reste {n})"
     }
   }
 }

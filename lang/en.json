@@ -21,7 +21,15 @@
       "Sync": {
         "Name": "Also apply to the combat HUD and Token Action HUD",
         "Hint": "Checked: the theme chosen here is also applied to Combat Cthulhu HUD (0.4.0 or later) and Token Action HUD (\"Token Action HUD – 1920s themes\" module), for a consistent table. Also works with the theme forced by the GM."
+      },
+      "Rattrapage": {
+        "Name": "Push / Luck buttons always visible",
+        "Hint": "Show push and Luck buttons under the result, with remaining Luck."
       }
+    },
+    "Rattrapage": {
+      "Chance": "Luck: {n}",
+      "Reste": "({n} left)"
     }
   }
 }
