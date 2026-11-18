@@ -176,7 +176,7 @@ Hooks.on('renderChatMessageHTML', (message, html) => {
       zone.className = 'c7cc-rattrapage coc7-card-buttons';
       zone.dataset.actorUuid = bloc.dataset.actorUuid ?? '';
 
-      const chance = Number(acteur?.system?.attribs?.luck?.value);
+      const chance = Number((acteur?.system?.attribs?.lck ?? acteur?.system?.attribs?.luck)?.value); // CoC7 : attribs.lck
       const avecChance = boutons.some((b) => b.dataset.action === 'luck') && Number.isFinite(chance);
       if (avecChance) {
         const info = document.createElement('div');
